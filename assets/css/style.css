@@ -18,7 +18,9 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: "oswald", sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -50,7 +52,7 @@ header a {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -110,7 +112,8 @@ main {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
 }
 
@@ -120,7 +123,7 @@ main {
     width: 90%;
 }
 
-#reasons h2{
+#reasons h2 {
     margin-bottom: 20px;
     font-size: 280%;
     text-align: center;
@@ -139,17 +142,19 @@ main {
     margin: 5px 0;
 }
 
-#benefits-physical > div, #benefits-mental > div {
+#benefits-physical>div,
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
+
 /* benefits circular image */
 
 #circle-cover-bg {
     background: url("../images/reasons-image.webp") no-repeat center center/cover;
     margin-bottom: 20px;
     height: 90vw;
-    width: 90vw;    
+    width: 90vw;
     border-radius: 50%;
     max-width: 300px;
     max-height: 300px;
@@ -186,44 +191,92 @@ main {
         width: fit-content;
         box-shadow: none;
         padding-right: 1rem;
-   } 
+    }
 
-   #menu {
-    display: flex;
-   }
+    #menu {
+        display: flex;
+    }
 
-   #menu > li {
-    padding-left: 1rem;
-   }
+    #menu>li {
+        padding-left: 1rem;
+    }
 
-   .nav-toggle-label {
-    display: none;
-   }
+    .nav-toggle-label {
+        display: none;
+    }
 
-   #logo {
-    font-size: 280%;
-    line-height: 75px;
-    margin: 0 0.5rem;
-   }
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
 
-   /* Main contentt adjustments for larger screens */
-   main {
-    margin-top: 79px;
-   }
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
-   /* Hero */
-   #cover-text {
-    width: 300px;
-    right: 50px;
-   }
-   
+    #benefits-physical > div,
+    #benefits-mental > div {
+        width: 75%;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-end;
+        text-align: end;
+    }
+
+    /* Main contentt adjustments for larger screens */
+    main {
+        margin-top: 79px;
+    }
+
+    /* Hero */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
+
 }
+
 /* Media query: Screens of 992px and larger */
 @media screen and (min-width: 992px) {
-    
+
     /* Header for 992px and up */
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 
+
+
+}
+
+@media screen and (min-width: 1200px) { 
+    /* Main content for large screen */
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits > div {
+        flex: 1;
+    }
+
+    #benefits-mental {
+        order: 2;
+    }
+
+    #benefits-image {
+        order: 1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-end
+    }
 }
