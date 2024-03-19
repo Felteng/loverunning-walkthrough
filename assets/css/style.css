@@ -97,6 +97,8 @@ footer {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
+    /* Header adjustments for larger screens */
     nav {
         display: block;
         position: relative;
@@ -116,5 +118,18 @@ footer {
    .nav-toggle-label {
     display: none;
    }
+
+   #logo {
+    font-size: 280%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+   }
+
+   /* Main contentt adjustments for larger screens */
+   main {
+    margin-top: 79px;
+   }
+
+
 
 }
